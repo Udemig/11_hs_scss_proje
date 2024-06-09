@@ -1,9 +1,14 @@
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 // Diğer Scss Dosyalarının Bağlantısı
-
+@import "variables";
 @import "./header";
 @import "./main";
 @import "./educationsInfo";
-
+@import "aboutUs";
+@import "topEducations";
+@import "contactUs";
+@import "footer";
 // Ortak yapıların sıfırlanması
 * {
   padding: 0;
@@ -15,9 +20,6 @@
   outline: none;
   scroll-behavior: smooth; /* Sayfa geçişlerini yavaş kılar. */
 }
-
-// Google Fonts
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 // Renk ve Fon Tanımlama
 // Renkler
@@ -48,5 +50,34 @@ body {
     border: 2px solid $textColor;
     background-color: transparent;
     color: $textColor;
+  }
+}
+
+@media (max-width: 1220px) {
+  .navbar li {
+    display: none;
+  }
+  .home {
+    .home-text {
+      h5 {
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 38px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .btn {
+        padding: 8px 15px;
+        font-size: 16px;
+        transition: all 0.5s;
+      }
+    }
+  }
+
+  .about-us {
+    display: flex;
+    flex-direction: column;
   }
 }
